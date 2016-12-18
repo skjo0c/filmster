@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'rails_12factor', group: :production
 #omdb-api gem
 gem 'omdb-api'
 #carrierwave
