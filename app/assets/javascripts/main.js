@@ -5,7 +5,7 @@ $(function(){
   		e.preventDefault();
 
   		$.ajax({
-		    url: 'http://www.omdbapi.com/?',
+		    url: 'https://www.omdbapi.com/?/',
     		data: form.serialize()
 		  })
 		  .done(function(data){
@@ -70,7 +70,7 @@ $(function(){
 			  <br />
 			  <input type="submit" class="btn btn-success pull-right" />
 			</form>
-			
+
 			container.append(htmlString);
 	}
 });
