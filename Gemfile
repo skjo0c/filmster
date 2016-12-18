@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#omdb-api gem
+gem 'omdb-api'
 #carrierwave
 gem 'carrierwave'
 #devise
