@@ -1,13 +1,28 @@
-	<nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+       <div class="navbar-header">
          		<a class="navbar-brand" href="/">Filmster</a>
 		</div>
 
 		<div class="nav navbar-nav navbar-right">
-	    	<%= link_to 'SignUp', new_user_registration_path %>
-	        <%= link_to 'Edit Page', edit_user_registration_path %>
+			<% if user_signed_in? %>
+				
+				<span class = "userdes" %>
+					<span class = "showusername">
+						<%= current_user.username %>
+					</span>
+					<span class = "showuserpic">					
+						<%= image_tag current_user.photo, class: 'prof_pic_small'  %>					
+					</span>
+				</span>
+
+				<span>
+			    	<%= link_to 'Edit Page', edit_user_registration_path %>
+			    </span>
+	    	<% else %>		        
+		        <%= link_to 'SignUp', new_user_registration_path %>
+	        <% end %>
 	    </div>
 	           
-      </div>
+    </div>
 </nav>

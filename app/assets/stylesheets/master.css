@@ -7,3 +7,23 @@
 .textsearch{
 	margin-bottom: 50px;
 }
+
+.showusername{
+	color: white;
+	font-size: 20px;
+	font-family: 'Russo One', sans-serif;
+	color: white !important;
+	visibility: hidden;
+	opacity: 0
+}
+
+.prof_pic_small{
+	border-radius: 50%;
+	height: 80px;
+	width: 80px
+}
+
+.userdes:hover .showusername{
+	visibility: visible;
+	opacity: 1;
+}

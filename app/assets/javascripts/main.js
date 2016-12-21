@@ -60,16 +60,16 @@ $(function(){
 
 	    	htmlString += `<p>${data.Title}</p>
 	    					<p>${data.Plot}</p>
-	    					<p>${data.imdbRating}</p>`
-	    		// console.log(data.Plot);
+	    					<p>${data.imdbRating}</p>
+	    		
 
 	    	<form id="rating-form" action="/reviews" method="POST">
 			  <input type="hidden" name="authenticity_token" value=${window._token} />
-			  <input type="hidden" name="imdbid" value=${movie["imdbID"]} />
+			  <input type="hidden" name="imdbid" value=${data["imdbID"]} />
 			  <textarea name= "review[comment]" class="form-control" placeholder="Your review in 140 characters"/>
 			  <br />
 			  <input type="submit" class="btn btn-success pull-right" />
-			</form>
+			</form>`
 
 			container.append(htmlString);
 	}
